@@ -15,7 +15,7 @@ print ('Waiting for data ({0} seconds)...'.format(timeout))
 while True:
 	server.settimeout(timeout)
 	try:
-		d = server.recvfrom(102400)
+		d = server.recvfrom(1048576)
 	except socket.timeout: 
 		print('Time is out. {0} seconds have passed'.format(timeout))
 		break

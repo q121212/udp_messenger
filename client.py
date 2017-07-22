@@ -26,7 +26,7 @@ def send_message(message):
 	client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	msg = message
 	client.sendto(msg.encode('utf-8'), (host, port))
-	d = client.recvfrom(102400)
+	d = client.recvfrom(1048576)
 	reply = d[0]
 	addr = d[1]
 	# print(d)
