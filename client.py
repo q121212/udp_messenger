@@ -3,10 +3,12 @@
 import socket
 import sys
 
+HOST = '192.168.0.52'
+PORT = 7777
 
 def input_message():
-	host = '192.168.0.52'
-	port = 7777
+	host = HOST
+	port = PORT
 	client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	while True:
 		msg = input('Enter message to send: ')
@@ -21,8 +23,8 @@ def input_message():
 
 def send_message(message):
 	'''Analogue for bash command: echo -n "hello" >/dev/udp/192.168.0.52/7777 '''
-	host = '192.168.0.52'
-	port = 7777
+	host = HOST
+	port = PORT
 	client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	msg = message
 	client.sendto(msg.encode('utf-8'), (host, port))
