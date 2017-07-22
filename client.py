@@ -42,8 +42,6 @@ if __name__ == '__main__':
 	except:
 		pass
 
-	# for arg in sys.argv:
-		# print(arg)
 	while True:
 		x+=1
 		send_message(ext_param + '_' + str(x))

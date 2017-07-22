@@ -1,6 +1,6 @@
 #!/bin/bash
-
 # Script for performance testing
+
 rm log.log
 ./server.py > /dev/null &
 
@@ -11,5 +11,5 @@ done
 
 python3
 a=$(ps ax |grep python3 |awk 'BEGIN {ORS=" "}; {print $1}')
-kill $a
-echo "$counter"
+kill $a > /dev/null 2>&1 &
+ls -lah|grep 'log.log'

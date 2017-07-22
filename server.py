@@ -22,7 +22,7 @@ while True:
 	received = d
 	addr = d[1]
 	print ('Received data: ' , received)
-	logger.insert_text(str(received))
+	logger.insert_text(str(received[0]) + ' ' + str(received[1]))
 	msg = "The message was received.".format(received[0])
 	server.sendto(msg.encode('utf-8'), addr)
 server.close()
