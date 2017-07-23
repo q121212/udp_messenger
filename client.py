@@ -3,7 +3,7 @@
 import socket
 import sys
 
-HOST = '192.168.0.52'
+HOST = '192.168.43.244'
 PORT = 7777
 
 def input_message():

